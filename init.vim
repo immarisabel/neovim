@@ -14,11 +14,9 @@
 "└────────────────────────────────────────┘
 	set number
 	let mapleader = ","
-	setlocal spell spelllang=en_us
+	"setlocal spell spelllang=en_us
 	language en_US
 	set termguicolors
-	
-	
 	
 	set tabstop=4
 	set shiftwidth=4
@@ -38,7 +36,8 @@
 	Plug 'thaerkh/vim-workspace'
 	let g:workspace_autocreate = 0
 	let g:workspace_autosave_always = 1
-	
+	Plug 'mechatroner/rainbow_csv'
+
 "┌────────────────────────────────────────┐
 "│    NERDTree                            │
 "└────────────────────────────────────────┘
@@ -79,6 +78,7 @@
 "│    Telekasten                          │
 "└────────────────────────────────────────┘		
 	Plug 'renerocksai/telekasten.nvim'
+	Plug 'renerocksai/calendar-vim'
 	
 	nnoremap <leader>kk <cmd>Telekasten panel<CR><cr>
 
@@ -138,14 +138,11 @@
 " set up which theme to use
 lua << EOF
 	require('penumbra').load()
+
+	require('telekasten').setup({
+	  home = vim.fn.expand("~/.android/Documents/Writing/Notes"),
+	})
 EOF
-
-
-
-"┌────────────────────────────────────────┐
-"│==========  CUSTOM DASHBOARD ===========│
-"└────────────────────────────────────────┘
-
 
 
 "┌────────────────────────────────────────┐
@@ -158,7 +155,7 @@ EOF
 	
 	nnoremap <A-p> <cmd>PlugInstall<CR><cr>
 	nnoremap <A-o> <cmd>PlugClean<CR><cr>
-	
+
 	nnoremap <F8> :e ~/AppData/Local/nvim/Dashboard.txt <Enter>
-	
+	nnoremap <F7> :e ~/AppData/Local/nvim/init.vim <Enter>
 	nnoremap <leader>s :ToggleWorkspace<CR>

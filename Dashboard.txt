@@ -3,20 +3,20 @@
 ┌────────────────────────────────────────┐
 │                   KEYS                 
 └────────────────────────────────────────┘
-  NERD Tree		[C-n] [C-t] [C-f]
- 󰙏 Zen Mode		[C-z]
- 󰌌 Which KEYS		[C-k]
-  To Do		<leader>td
+  NERD Tree			[C-n] [C-t] [C-f]
+ 󰙏 Zen Mode				[C-z]
+ 󰌌 Which KEYS			[C-k]
+  To Do				<leader>td
 
-  Telescope		<leader>f?
- 󰈞 find file 		<leader>ff
-  live grep		<leader>fg
+  Telescope			<leader>f?
+ 󰈞 find file 			<leader>ff
+  live grep			<leader>fg
   fuzzy find current	<leader>fz
-  icons		<leader>fe
+  icons				<leader>fe
 
 ┌────────────────────────────────────────┐
 │                   TIPS                
 └────────────────────────────────────────┘
-󰗼 <leader>q		 [F9]
- <leader>w		󰕮 [F8]
-
+󰗼 <leader>q			 [F9]
+ <leader>w			󰕮 [F8]
+					 [F7]
