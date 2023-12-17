@@ -1,0 +1,22 @@
+
+	Love. & spread confetti 󱗃     
+┌────────────────────────────────────────┐
+│                   KEYS                 
+└────────────────────────────────────────┘
+  NERD Tree		[C-n] [C-t] [C-f]
+ 󰙏 Zen Mode		[C-z]
+ 󰌌 Which KEYS		[C-k]
+  To Do		<leader>td
+
+  Telescope		<leader>f?
+ 󰈞 find file 		<leader>ff
+  live grep		<leader>fg
+  fuzzy find current	<leader>fz
+  icons		<leader>fe
+
+┌────────────────────────────────────────┐
+│                   TIPS                
+└────────────────────────────────────────┘
+󰗼 <leader>q		 [F9]
+ <leader>w		󰕮 [F8]
+
