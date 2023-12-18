@@ -1,22 +1,34 @@
 
-	Love. & spread confetti 󱗃     
+	Love. & spread confetti 󱗃
 ┌────────────────────────────────────────┐
 │                   KEYS                 
 └────────────────────────────────────────┘
-  NERD Tree			[C-n] [C-t] [C-f]
- 󰙏 Zen Mode				[C-z]
- 󰌌 Which KEYS			[C-k]
-  To Do				<leader>td
+  NERD Tree............[C-n] [C-t] [C-f]
+ 󰙏 Zen Mode	......................[C-z]
+ 󰌌 Which KEYS.....................[C-k]
+  To Do..........................<l>td
 
-  Telescope			<leader>f?
- 󰈞 find file 			<leader>ff
-  live grep			<leader>fg
-  fuzzy find current	<leader>fz
-  icons				<leader>fe
+  Telescope......................<l>f?
+ 󰈞 find file......................<l>ff
+  live grep......................<l>fg
+  fuzzy find current.............<l>fz
+  icons..........................<l>fe
 
 ┌────────────────────────────────────────┐
 │                   TIPS                
 └────────────────────────────────────────┘
-󰗼 <leader>q			 [F9]
- <leader>w			󰕮 [F8]
-					 [F7]
+
+󰗼 <l>q			 [F9]			 [C-c]	
+ <l>w			󰕮 [F8]			 [F7]
+
+┌────────────────────────────────────────┐
+│                   NOTES                
+└────────────────────────────────────────┘
+
+ NEW...............................<l>kn
+󰑕 RENAME............................<l>kr
+󰼍 NEW(t)............................<l>kt
+󰃶 TODAY.............................<l>ktt
+ CALENDAR..........................<l>kc
+ TAGS..............................<l>kst
+

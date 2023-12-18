@@ -26,17 +26,39 @@
 	set wrap
 	set lines=40
 	set foldcolumn=2	
-	
 	call plug#begin()
 	
 "┌────────────────────────────────────────┐
 "│===============   PLUGS   ==============│
 "└────────────────────────────────────────┘
 
+" UTILS
+
 	Plug 'thaerkh/vim-workspace'
 	let g:workspace_autocreate = 0
 	let g:workspace_autosave_always = 1
-	Plug 'mechatroner/rainbow_csv'
+	
+    Plug 'mechatroner/rainbow_csv'
+
+    Plug 'sontungexpt/url-open', { 'on': 'VeryLazy', 'cmd': 'URLOpenUnderCursor' }
+	if has('nvim')
+		autocmd VimEnter * Plug 'sontungexpt/url-open', { 'on': 'VeryLazy', 'cmd': 'URLOpenUnderCursor' }
+		autocmd VimEnter * lua require'url-open'.setup({})
+	endif
+    nnoremap <C-c> :URLOpenUnderCursor<CR>
+
+"┌────────────────────────────────────────┐
+"│    Snippets                            │
+"└────────────────────────────────────────┘
+
+	Plug 'dcampos/nvim-snippy'
+	Plug 'honza/vim-snippets'
+	
+	imap <expr> <Tab> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<Tab>'
+	imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
+	smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'
+	smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
+	xmap <Tab> <Plug>(snippy-cut-text)
 
 "┌────────────────────────────────────────┐
 "│    NERDTree                            │
@@ -84,7 +106,7 @@
 
 	nnoremap <leader>kn <cmd>Telekasten new_note<CR><cr>
 	nnoremap <leader>kt <cmd>Telekasten new_templated_note<CR><cr>
-	nnoremap <leader>kr <cmd>Telekasten rename_note<CR><cr>
+	nnoremap <leader>kr <cmd>Telekasten rename_note<CR><cr> "choco install sed
 	nnoremap <leader>ks <cmd>Telekasten switch_vault<CR><cr>
 	
 	nnoremap <leader>ktt <cmd>Telekasten goto_today<CR><cr>
@@ -97,7 +119,7 @@
 	nnoremap <leader>kfw <cmd>Telekasten find_weekly_notes<CR><cr>
 	nnoremap <leader>ksb <cmd>Telekasten show_backlinks<CR><cr>
 	nnoremap <leader>ksf <cmd>Telekasten find_friends<CR><cr>
-	
+	nnoremap <leader>kst <cmd>Telekasten show_tags<CR><cr>
 "┌────────────────────────────────────────┐
 "│    Bujo                                │
 "└────────────────────────────────────────┘	
@@ -116,21 +138,20 @@
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'nvim-tree/nvim-web-devicons'
-	
+
 	" THEMES
 	
 	Plug 'navarasu/onedark.nvim'
 	Plug 'catppuccin/nvim'
 	Plug 'Allianaab2m/penumbra.nvim'
 
-	" Install startscreen.vim plugin
-	Plug 'arp242/startscreen.vim'
+	Plug 'immarisabel/nvim-startpage'
 "┌────────────────────────────────────────┐
 "│===============   START   ==============│
 "└────────────────────────────────────────┘
 
 	call plug#end()
-	
+
 	syntax enable
 	
 	let g:airline_theme='violet'
@@ -143,7 +164,6 @@ lua << EOF
 	  home = vim.fn.expand("~/.android/Documents/Writing/Notes"),
 	})
 EOF
-
 
 "┌────────────────────────────────────────┐
 "│===============   KEYS    ==============│
