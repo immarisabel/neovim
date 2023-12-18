@@ -34,6 +34,8 @@
 
 " UTILS
 
+    Plug 'toppair/peek.nvim', { 'do': 'deno task --quiet build:fast' }
+
 	Plug 'thaerkh/vim-workspace'
 	let g:workspace_autocreate = 0
 	let g:workspace_autosave_always = 1
@@ -179,3 +181,13 @@ EOF
 	nnoremap <F8> :e ~/AppData/Local/nvim/Dashboard.txt <Enter>
 	nnoremap <F7> :e ~/AppData/Local/nvim/init.vim <Enter>
 	nnoremap <leader>s :ToggleWorkspace<CR>
+
+"	BUFFERS
+	nnoremap <leader>znb :new<CR>
+	nnoremap <leader>zbn :bn<CR> " next buffer
+	nnoremap <leader>zbp :bp<CR> " prev buffer
+	nnoremap <leader>zbc :bd<CR> " close file
+
+	
+
+	
