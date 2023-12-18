@@ -3,9 +3,9 @@ I do not feel like learning a whole new language just to use an editor and trees
 
 To do:
 
-1. install Ripgrep
+1. install `Ripgrep`
 
-2. Install Chocolatey
+2. install `Chocolatey`
 
 POWERSHELL:
 
@@ -18,7 +18,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 3. Install Sep
 `choco install sed`
 
-4.When all is installed, update ` ..\nvim-data\lua\url-open\handlers.lua`
+4. When all is installed, update ` ..\nvim-data\lua\url-open\handlers.lua`
 The original code for some reason does not detect Windows.
 Probably old Windows. So I updated it.
 
